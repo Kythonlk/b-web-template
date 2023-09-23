@@ -2,7 +2,7 @@
 
 Welcome to the Business Portfolio Website Template repository!
 
-![Template Preview](insert-image-link-here)
+![Template Preview](public/opengraph.jpg)
 
 This repository contains a simple yet elegant business portfolio website template designed to help you showcase your work with style. Whether you're a freelancer, a small business owner, or an aspiring professional, this template has you covered. It's built using a combination of HTML, CSS, and JavaScript, Astro and it comes with a range of features to make your website stand out.
 
@@ -18,7 +18,7 @@ This repository contains a simple yet elegant business portfolio website templat
 
 ## Demo
 
-Explore the template in action by visiting our [Demo Website](insert-demo-link-here).
+Explore the template in action by visiting our [Demo Website](https://website4you.netlify.app/).
 
 ## Documentation
 
