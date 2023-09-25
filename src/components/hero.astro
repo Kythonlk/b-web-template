@@ -3,6 +3,7 @@ import { Picture } from "@astrojs/image/components";
 import heroImage from "assets/hero.jpg";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
+import { heroContent } from "@utils/websitecontent";
 ---
 
 <main
@@ -21,20 +22,19 @@ import { Icon } from "astro-icon";
   <div>
     <h1
       class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Marke Your Business website with Website4you
+      {heroContent.heading}
     </h1>
-    <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Website4you is a starter template for startups, marketing websites & landing
-      pages.<wbr /> Built with leatest technologies Astro and TailwindCSS. You can quickly create
-      any website with us.
-    </p>
+    <p
+      set:html={heroContent.body}
+      class="text-lg mt-4 text-slate-600 max-w-xl"
+    />
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
       <Link
         href="/#contact"
         target="_blank"
         class="flex gap-1 items-center justify-center"
         rel="noopener">
-        Conatct us
+        {heroContent.buttonOne}
       </Link>
       <Link
         size="lg"
@@ -43,8 +43,8 @@ import { Icon } from "astro-icon";
         href=""
         class="flex gap-1 items-center justify-center"
         target="_blank">
-        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
-        GitHub Repo
+        <Icon class="text-black w-4 h-4" name={heroContent.buttonTwoIcon} />
+        {heroContent.buttonTwo}
       </Link>
     </div>
   </div>
