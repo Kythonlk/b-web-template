@@ -1,7 +1,7 @@
 # build output
 dist/
-.output/
-.astro
+# generated types
+.astro/
 
 # dependencies
 node_modules/
@@ -19,17 +19,3 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
-
-
-www/node_modules/
-
-# logs
-www/npm-debug.log*
-www/yarn-debug.log*
-www/yarn-error.log*
-www/pnpm-debug.log*
-
-
-# environment variables
-www/.env
-www/.env.production
