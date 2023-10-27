@@ -17,42 +17,49 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 const pricing = [
   {
-    name: "Personal",
-    price: "Free",
-    popular: false,
-    features: [
-      "Lifetime free",
-      "Up to 3 users",
-      "Unlimited Pages",
-      "Astro Sub domain",
-      "Basic Integrations",
-      "Community Support",
-    ],
-    button: {
-      text: "Get Started",
-      link: "/",
-    },
-  },
-  {
-    name: "Startup",
+    name: "Simple Business",
     price: {
       monthly: "$19",
       annual: "$16",
       discount: "10%",
       original: "$24",
     },
-    popular: true,
+    popular: false,
     features: [
-      "All Free Features",
-      "Up to 20 users",
-      "20 Custom domains",
-      "Unlimited Collaborators",
-      "Advanced Integrations",
+      "Lifetime Uptime Guarantee",
+      "Up to 5 Pages",
+      "Free Life Time Hosting",
+      "Unlimited Backups",
+      "Any Basic api Integrations",
       "Priority Support",
+      "Dynamic Blog Integration",
     ],
     button: {
       text: "Get Started",
-      link: "#",
+      link: "/#contact",
+    },
+  },
+  {
+    name: "With CMS intigrated",
+    price: {
+      monthly: "$39",
+      annual: "$16",
+      discount: "10%",
+      original: "$24",
+    },
+    popular: true,
+    features: [
+      "All Simple Features",
+      "Up to 10 Static",
+      "Up to 3 Dynamic page types",
+      "Unlimited Forms",
+      "CMS Integrations",
+      "Advanced Integrations",
+      "Telegram Support",
+    ],
+    button: {
+      text: "Get Started",
+      link: "/#contact",
     },
   },
   {
@@ -62,14 +69,15 @@ const pricing = [
     features: [
       "All Pro Features",
       "Unlimited Custom domains",
-      "99.99% Uptime SLA",
-      "SAML & SSO Integration",
+      "Fully Managed Infrastructure",
+      "Auth & SSO Integration",
       "Dedicated Account Manager",
+      "Full Stack Development",
       "24/7 Phone Support",
     ],
     button: {
       text: "Contact us",
-      link: "/contact",
+      link: "/#contact",
     },
   },
 ];
@@ -83,21 +91,19 @@ const pricing = [
     <Cta />
   </Container>
   <Container>
-
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
       {pricing.map((item) => <PricingCard plan={item} />)}
     </div>
   </Container>
   <Container>
-
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16" id="about">
-      <h2 class="font-bold text-3xl text-gray-800">
+      <h2 class="font-bold text-3xl text-gray-800 text-center">
         Empowering the world with Website4you.
       </h2>
-      <p class="text-lg leading-relaxed text-slate-500">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
+      <p class="text-lg leading-relaxed text-slate-500 text-center">
+        At Website4You, we're a diverse team from all over the world.
+         We come from different backgrounds, each bringing unique personalities, 
+         experiences, and skills to the table. This diversity is what makes our team so special.
       </p>
     </div>
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
@@ -119,9 +125,7 @@ const pricing = [
             </div>
 
             <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800">
-                {teamMemberEntry.data.name}
-              </h2>
+              <h2 class="text-lg text-gray-800">{teamMemberEntry.data.name}</h2>
               <h3 class="text-sm text-slate-500">
                 {teamMemberEntry.data.title}
               </h3>
@@ -132,8 +136,9 @@ const pricing = [
     </div>
   </Container>
   <Container>
-
-    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-40" id="contact">
+    <div
+      class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-40"
+      id="contact">
       <div>
         <h2 class="font-medium text-2xl text-gray-800">Contact website4you</h2>
         <p class="text-lg leading-relaxed text-slate-500 mt-3">
@@ -141,18 +146,25 @@ const pricing = [
           email or call phone.
         </p>
         <div class="mt-5">
-          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+          <div class="flex items-center mt-2 space-x-2 text-gray-600 py-1">
             <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
-            <span>1734 Sanfransico, CA 93063</span>
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
-              href="mailto:hello@website4youstarter.com"
-              >hello@website4youstarter.com</a
-            >
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
-              href="tel:+1 (987) 4587 899">+1 (987) 4587 899</a
-            >
+            <span>Welmilla,Bandaragama, Sri Lanka</span>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600 py-2">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
+            <span>Airport Road, Abu dhabi, UAE</span>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600 py-1">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" />
+            <a href="mailto:contact@kythonlk.com">contact@kythonlk.com</a>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600 py-2">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" />
+            <a href="tel:+94713486065">+94 (71) 3486 065</a>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600 py-1">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" />
+            <a href="tel:+971562982733">+971 (56) 298 2733</a>
           </div>
         </div>
       </div>

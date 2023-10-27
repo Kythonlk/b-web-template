@@ -1,17 +1,21 @@
 ---
 import Button from "./ui/button.astro";
+
+const formapi = [
+  {
+    Key : "1f5994e4-b1d9-4ca8-a1ab-43ad62c3cedb",
+  }
+]
 ---
 
-<!-- To make this contact form work, create your free access key from https://web3forms.com/
-     Then you will get all form submissions in your email inbox. -->
 <form
   action="https://api.web3forms.com/submit"
   method="POST"
   id="form"
-  class="needs-validation"
+  class="needs-validation py-8"
   novalidate>
-  <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
-  <!-- Create your free access key from https://web3forms.com/ -->
+  <input type="hidden" name="access_key" value={formapi[0].Key} />
+
   <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
   <div class="mb-5">
     <input
