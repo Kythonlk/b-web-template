@@ -3,7 +3,7 @@ draft: false
 name: "Hamad Ahamed"
 title: "Marketing Manager"
 avatar: {
-    src: "https://ibb.co/PYMY5Qc",
+    src: "https://i.ibb.co/kyJyh14/senula.png",
     alt: "Hamad Ahamed"
 }
 publishDate: "2022-11-08 15:39"
